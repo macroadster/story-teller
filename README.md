@@ -1,6 +1,6 @@
 # Sci-Fi Story Generator with SentencePiece
 
-This project implements a Transformer-based language model for generating sci-fi stories. It uses SentencePiece for subword tokenization and is trained on text from Project Gutenberg's "The Time Machine" by H.G. Wells.
+This project implements a Transformer-based language model for generating sci-fi stories. It uses SentencePiece for tokenization and is trained on text from Project Gutenberg's "The Time Machine" by H.G. Wells.
 
 ## Features
 
