@@ -59,7 +59,7 @@ python inference.py
 This script will:
 
   Load the trained model and SentencePiece model.
-  Generate 3 sci-fi stories.
+  Generate a story.
   You can modify the inference.py script to change the starting text, maximum length, and temperature of the generated stories.
 
 ### Customization
