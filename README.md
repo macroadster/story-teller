@@ -31,8 +31,8 @@ pip install -r requirement.text
 Clone the Repository:
 
 ```bash
-git clone [your-repository-url]
-cd [your-repository-directory]
+git clone https://github.com/macroadster/story-teller.git
+cd story-teller
 ```
 
 Run the Training Script:
@@ -43,12 +43,12 @@ python train.py
 
 This script will:
 
-Download the sci-fi text from Project Gutenberg.
-Train a SentencePiece tokenizer.
-Generate training data.
-Train the Transformer model.
-Save the trained model (transformer_llm.pth) and SentencePiece model (sentencepiece_model.model).
-Generate sample story. (Inference)
+  Download the sci-fi text from Project Gutenberg.
+  Train a SentencePiece tokenizer.
+  Generate training data.
+  Train the Transformer model.
+  Save the trained model (transformer_llm.pth) and SentencePiece model (sentencepiece_model.model).
+  Generate sample story. (Inference)
 
 ### Run the Inference Script:
 
@@ -58,37 +58,38 @@ python inference.py
 
 This script will:
 
-Load the trained model and SentencePiece model.
-Generate 3 sci-fi stories.
-You can modify the test7.py script to change the starting text, maximum length, and temperature of the generated stories.
+  Load the trained model and SentencePiece model.
+  Generate 3 sci-fi stories.
+  You can modify the test7.py script to change the starting text, maximum length, and temperature of the generated stories.
 
 ### Customization
 
-Training Data: To train the model on different text, modify the fetch_sci_fi_text function in test6.py to fetch your desired text data.
-Model Parameters: Adjust the model's hyperparameters (e.g., d_model, num_heads, num_layers) in test6.py to experiment with different model configurations.
-Vocabulary Size: Modify the vocab_size parameter in train_sentencepiece_tokenizer to change the size of the SentencePiece vocabulary.
-Generation Parameters: Change the temperature and max_length parameters in the generate_sci_fi_story function to control the generation process.
-Device selection: Change the device string, to use cuda, mps or cpu.
-Model Files
+* Training Data: To train the model on different text, modify the fetch_sci_fi_text function in test6.py to fetch your desired text data.
+* Model Parameters: Adjust the model's hyperparameters (e.g., d_model, num_heads, num_layers) in test6.py to experiment with different model configurations.
+* Vocabulary Size: Modify the vocab_size parameter in train_sentencepiece_tokenizer to change the size of the SentencePiece vocabulary.
+* Generation Parameters: Change the temperature and max_length parameters in the generate_sci_fi_story function to control the generation process.
+* Device selection: Change the device string, to use cuda, mps or cpu.
 
-transformer_llm.pth: Contains the trained model's state dictionary.
-sentencepiece_model.model: Contains the trained SentencePiece model.
+#### Model Files
+
+* transformer_llm.pth: Contains the trained model's state dictionary.
+* sentencepiece_model.model: Contains the trained SentencePiece model.
 
 ### Code Structure
 
-train.py: Training script.
-inference.py: Inference script.
+* train.py: Training script.
+* inference.py: Inference script.
 
-MultiHeadAttention, PositionWiseFeedForward, TransformerBlock, TransformerLLM: Model architecture components.
-fetch_sci_fi_text, train_sentencepiece_tokenizer, tokenize, detokenize, generate_training_data, TextDataset, custom_collate: Data processing and utility functions.
-generate_sci_fi_story: Story generation function.
+* MultiHeadAttention, PositionWiseFeedForward, TransformerBlock, TransformerLLM: Model architecture components.
+* fetch_sci_fi_text, train_sentencepiece_tokenizer, tokenize, detokenize, generate_training_data, TextDataset, custom_collate: Data processing and utility functions.
+* generate_sci_fi_story: Story generation function.
 
 ### Future Improvements
 
-Implement early stopping to prevent overfitting.
-Add more comprehensive evaluation metrics.
-Experiment with different model architectures.
-Fine-tune the model on a larger and more diverse dataset.
-Add better handling of sentence boundaries and punctuation.
-Add command line arguments to the scripts.
-Add a configuration file.
+* Implement early stopping to prevent overfitting.
+* Add more comprehensive evaluation metrics.
+* Experiment with different model architectures.
+* Fine-tune the model on a larger and more diverse dataset.
+* Add better handling of sentence boundaries and punctuation.
+* Add command line arguments to the scripts.
+* Add a configuration file.
