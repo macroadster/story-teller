@@ -8,7 +8,7 @@ This project implements a Transformer-based language model for generating sci-fi
 * **SentencePiece Tokenization:** Employs SentencePiece for efficient and language-agnostic subword tokenization.
 * **Sci-Fi Text Generation:** Generates coherent sci-fi stories based on learned patterns.
 * **Training and Inference Scripts:** Includes scripts for training the model and generating stories.
-* **Device Agnostic:** Supports training and inference on CPU, CUDA, and MPS.
+* **Device Agnostic:** Supports training and inference on CPU and MPS.
 
 ## Getting Started
 
@@ -68,7 +68,7 @@ This script will:
 * Model Parameters: Adjust the model's hyperparameters (e.g., d_model, num_heads, num_layers) in train.py to experiment with different model configurations.
 * Vocabulary Size: Modify the vocab_size parameter in train_sentencepiece_tokenizer to change the size of the SentencePiece vocabulary.
 * Generation Parameters: Change the temperature and max_length parameters in the generate_sci_fi_story function to control the generation process.
-* Device selection: Change the device string, to use cuda, mps or cpu.
+* Device selection: Change the device string, to use mps or cpu.
 
 #### Model Files
 
